@@ -53,6 +53,12 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
+                        <form action="{{ url('CognitoLogout') }}" method="POST">
+                            {{ csrf_field() }}
+                            
+                            <button class="btn btn-primary" name="send" type="submit">ログアウト(cookie削除後、エンドポイント呼出し)</button>
+                        </form>
+                        <!-- <li><a href="{{ url('https://myapp-dowell-test.auth.us-east-2.amazoncognito.com/logout?client_id=6381mbhkoa982us60mlonkhu79&logout_uri=https://atros.ml') }}">Cognito Logout</a></li> -->
                         <li><a href="{{ url('/login') }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
