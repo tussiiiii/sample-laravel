@@ -33,7 +33,7 @@ class CognitoController extends Controller
         setcookie("AWSELBAuthSessionCookie-0", "", time() - 3600, "/");
         setcookie("AWSELBAuthSessionCookie-1", "", time() - 3600, "/");
         // リダイレクト先のURLへ転送
-        $url = 'https://myapp-dowell-test.auth.us-east-2.amazoncognito.com/logout?client_id=6381mbhkoa982us60mlonkhu79&logout_uri=https://atros.ml';
+        $url = 'https://myapp-dowell-test.auth.us-east-2.amazoncognito.com/logout?client_id=6381mbhkoa982us60mlonkhu79&logout_uri=https://atros.ml/';
         header('Location: ' . $url, true , 301);
         exit;
         // return redirect('/tasks');
