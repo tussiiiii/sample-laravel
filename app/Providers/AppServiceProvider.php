@@ -12,15 +12,15 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    // public function boot(UrlGenerator $url)
-    // {
-    //     //
-    //     $url->forceSchema('https');
-    // }
-    public function boot()
+    public function boot(UrlGenerator $url)
     {
         //
+        $url->forceSchema('https');
     }
+    // public function boot()
+    // {
+    //     //
+    // }
 
     /**
      * Register any application services.
