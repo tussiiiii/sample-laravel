@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use \Firebase\JWT\JWT;
+
 
 class CognitoController extends Controller
 {
