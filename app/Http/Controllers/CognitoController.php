@@ -64,7 +64,7 @@ class CognitoController extends Controller
         $result = JWT::decode($encoded_jwt, $pub_key, ['ES256']);
         var_dump($result);
 
-        return $this->redirect(['action' => '/', $result]);
+        return $this->redirect(['action' => 'logout', $result]);
 
       }
 
