@@ -58,9 +58,9 @@ class CognitoController extends Controller
         $url = 'https://public-keys.auth.elb.' . $region . '.amazonaws.com/' . $kid;
         $pub_key = file_get_contents($url);
       
-        // // step 3: Get the payload
-        // $result = JWT::decode($encoded_jwt, $pub_key, ['ES256']);
-        var_dump($pub_key);
+        // step 3: Get the payload
+        $result = JWT::decode($encoded_jwt, $pub_key, ['ES256']);
+        var_dump($result);
 
       }
 
