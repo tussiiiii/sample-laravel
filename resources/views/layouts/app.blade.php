@@ -53,6 +53,11 @@
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
+                        <form action="{{ url('CognitoGetUserInfo') }}" method="POST">
+                            {{ csrf_field() }}
+                            
+                            <button class="btn btn-primary" name="send" type="submit">ユーザー情報取得(JWT)</button>
+                        </form>
                         <form action="{{ url('CognitoLogout') }}" method="POST">
                             {{ csrf_field() }}
                             

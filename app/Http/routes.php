@@ -29,6 +29,7 @@ Route::group(['middleware' => ['web']], function () {
     })->middleware('guest');
     
     Route::post('/CognitoLogout', 'CognitoController@logout');
+    Route::post('/CognitoGetUserInfo', 'CognitoController@getUserInfo');
 
     Route::get('/tasks', 'TaskController@index');
     Route::post('/task', 'TaskController@store');
