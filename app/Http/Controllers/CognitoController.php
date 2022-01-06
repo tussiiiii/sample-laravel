@@ -52,15 +52,15 @@ class CognitoController extends Controller
         $decoded_jwt_headers = base64_decode($jwt_headers);
         $decoded_json = json_decode($decoded_jwt_headers);
       
-        // // step 2: Get the public key from regional endpoint
-        // $kid = $decoded_json->kid;
-        // $region = 'us-east-2';
+        // step 2: Get the public key from regional endpoint
+        $kid = $decoded_json->kid;
+        $region = 'us-east-2';
         // $url = 'https://public-keys.auth.elb.' . $region . '.amazonaws.com/' . $kid;
         // $pub_key = file_get_contents($url);
       
         // // step 3: Get the payload
         // $result = JWT::decode($encoded_jwt, $pub_key, ['ES256']);
-        var_dump($decoded_json);
+        var_dump($kid);
 
       }
 
