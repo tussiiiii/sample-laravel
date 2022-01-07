@@ -42,6 +42,10 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Task List
                 </a>
+                <br>
+                @if (Session::has('email'))
+                    <p>{{ session('email') }}</p>
+                @endif
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
