@@ -12,6 +12,8 @@
                     <br>
                     ALB+Cognito+EC2(public subnet )+RDS(private subnet)
                     <br>
+                    <br>
+                    <br>
                     @if (Session::has('sub'))
                         <p>sub:{{ session('sub') }}</p>
                     @endif
