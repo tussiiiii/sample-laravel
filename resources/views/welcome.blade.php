@@ -8,7 +8,9 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page!!!
+                    Atrosユーザー認証テストページです。
+                    <br>
+                    ALB+Cognito+EC2(public subnet )+RDS(private subnet)
                     <br>
                     @if (Session::has('sub'))
                         <p>sub:{{ session('sub') }}</p>
