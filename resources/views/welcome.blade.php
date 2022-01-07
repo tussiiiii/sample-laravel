@@ -9,11 +9,15 @@
 
                 <div class="panel-body">
                     Your Application's Landing Page!!!
+                    <br>
                     @if (Session::has('sub'))
                         <p>sub:{{ session('sub') }}</p>
                     @endif
                     @if (Session::has('email'))
                         <p>email:{{ session('email') }}</p>
+                    @endif
+                    @if (Session::has('custom:saas_contractor_m_id'))
+                        <p>SaaS契約者ID:{{ session('custom:saas_contractor_m_id') }}</p>
                     @endif
                 </div>
             </div>
