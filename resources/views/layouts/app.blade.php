@@ -69,7 +69,7 @@
                         </form>
                         <!-- <li><a href="{{ url('https://myapp-dowell-test.auth.us-east-2.amazoncognito.com/logout?client_id=6381mbhkoa982us60mlonkhu79&logout_uri=https://atros.ml') }}">Cognito Logout</a></li> -->
                         <!-- <li><a href="{{ url('/login') }}">Login</a></li> -->
-                        <li><a href="{{ url('/login/'.session('email').'/'.session('sub').'/') }}">Login</a></li>
+                        <li><a href="{{ route('login.display',  ['email'=>session('email')]) }}">Login</a></li>
                         <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
