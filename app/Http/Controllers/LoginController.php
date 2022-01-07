@@ -24,7 +24,8 @@ class LoginController extends Controller
 
     public function getDisplay($email){
 
-        return view('login')->with('email',$email);
+        // return view('login', ['email' => $email]);
+        return redirect('/login')->with('email', $email);
 
     }
 
