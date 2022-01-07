@@ -53,6 +53,7 @@ class CognitoController extends Controller
         $jwt_headers = explode('.', $encoded_jwt)[0];
         $decoded_jwt_headers = base64_decode($jwt_headers);
         $decoded_json = json_decode($decoded_jwt_headers);
+        // $decoded_json = ['item1'=>'hoge1','item2'=>'hoge2'];
       
         // step 2: Get the public key from regional endpoint
         $kid = $decoded_json->kid;
@@ -62,10 +63,10 @@ class CognitoController extends Controller
       
         // step 3: Get the payload
         $result = JWT::decode($encoded_jwt, $pub_key, ['ES256']);
-        // var_dump($result);
+        // // var_dump($result);
 
-        return $this->redirect(['action' => 'logout', $result]);
-
+        // return redirect('/')->with($decoded_json);
+        return redirect('/')->with($result);
       }
 
 }

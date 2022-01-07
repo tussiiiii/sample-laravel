@@ -8,7 +8,13 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Pag!!!
+                    Your Application's Landing Page!!!
+                    @if (Session::has('sub'))
+                        <p>sub:{{ session('sub') }}</p>
+                    @endif
+                    @if (Session::has('email'))
+                        <p>email:{{ session('email') }}</p>
+                    @endif
                 </div>
             </div>
         </div>
