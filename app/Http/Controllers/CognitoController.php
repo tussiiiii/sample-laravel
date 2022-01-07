@@ -66,8 +66,9 @@ class CognitoController extends Controller
         $result_json = json_decode(json_encode($result),true);  //object→array変換
         // var_dump($result_json);
 
-        // return redirect('/')->with($decoded_json);
-        return redirect('/')->with($result_json);
+        // 直前のページに戻す
+        // return redirect('/')->with($result_json);
+        return back()->with($result_json);
       }
 
 }
