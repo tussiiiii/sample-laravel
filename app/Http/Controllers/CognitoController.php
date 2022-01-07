@@ -63,7 +63,7 @@ class CognitoController extends Controller
       
         // step 3: Get the payload
         $result = JWT::decode($encoded_jwt, $pub_key, ['ES256']);
-        $result_json = json_decode(json_encode($result),true);
+        $result_json = json_decode(json_encode($result),true);  //object→array変換
         // var_dump($result_json);
 
         // return redirect('/')->with($decoded_json);
